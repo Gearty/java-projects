@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Controller.ItemsWindowController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="58.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+    <Label layoutX="343.0" layoutY="0.0" text="Товары" textFill="WHITE">
+      <font>
+        <Font name="Segoe Script" size="30.0" />
+      </font>
+    </Label>
+    <ImageView id="back.png" fitHeight="47.0" fitWidth="47.0" layoutX="0.0" layoutY="6.0">
+      <image>
+        <Image url="@../back.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Label layoutX="38.0" layoutY="16.0" text="Назад" textFill="BLACK">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <HBox layoutX="7.0" layoutY="6.0" onMouseClicked="#returnToMain" prefHeight="47.0" prefWidth="98.0" />
+    <FlowPane layoutX="0.0" layoutY="53.0" minHeight="446.0" prefHeight="494.0" prefWidth="800.0">
+      <children>
+        <TableView id="tableView" fx:id="tableItems" editable="true" prefHeight="494.0" prefWidth="800.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditStart="#editItem" prefWidth="220.0" text="Название" fx:id="nameColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditStart="#editItem" prefWidth="250.0" text="Описание" fx:id="descriptionColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditStart="#editItem" prefWidth="165.0" text="Количество" fx:id="quantityColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditStart="#editItem" prefWidth="165.0" text="Стоимость" fx:id="priceColumn" />
+          </columns>
+        </TableView>
+      </children>
+    </FlowPane>
+    <ImageView id="img_227082.png" fitHeight="35.0" fitWidth="35.0" layoutX="744.0" layoutY="12.0">
+      <image>
+        <Image url="@../plus.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <HBox layoutX="738.0" layoutY="6.0" onMouseClicked="#addItem" prefHeight="47.0" prefWidth="47.0" />
+  </children>
+</AnchorPane>

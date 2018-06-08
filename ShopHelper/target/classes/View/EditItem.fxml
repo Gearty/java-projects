@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="679.0" prefWidth="379.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Controller.EditItemController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="57.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" width="379.0" />
+    <CubicCurve controlX1="-9.0" controlX2="42.0" controlY1="-58.0" controlY2="65.0" endX="226.0" endY="-2.0" fill="#f4f4f4" layoutX="151.0" layoutY="58.0" startX="-150.0" stroke="BLACK" />
+    <Label layoutX="81.0" layoutY="8.0" text="Изменение товара" textFill="WHITE">
+      <font>
+        <Font name="Segoe UI Semibold Italic" size="24.0" />
+      </font>
+    </Label>
+    <FlowPane layoutX="0.0" layoutY="78.0" prefHeight="594.0" prefWidth="379.0">
+      <children>
+        <VBox alignment="CENTER" prefHeight="39.0" prefWidth="379.0">
+          <children>
+            <Label text="Название">
+              <font>
+                <Font size="20.0" fx:id="x1" />
+              </font>
+            </Label>
+          </children>
+        </VBox>
+        <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="379.0">
+          <children>
+            <TextField fx:id="nameField" alignment="CENTER" focusTraversable="false" prefHeight="30.0" prefWidth="246.0" promptText="" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="379.0">
+          <children>
+            <Label font="$x1" text="Количество" />
+          </children>
+        </HBox>
+        <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="379.0">
+          <children>
+            <TextField id="surnameField" fx:id="quantityField" alignment="CENTER" focusTraversable="false" prefWidth="246.0" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="379.0">
+          <children>
+            <Label alignment="CENTER" font="$x1" prefWidth="181.0" text="Цена" />
+          </children>
+        </HBox>
+        <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="379.0">
+          <children>
+            <TextField id="numberField" fx:id="priceField" alignment="CENTER" focusTraversable="false" prefWidth="246.0" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="379.0">
+          <children>
+            <Label font="$x1" text="Описание" />
+          </children>
+        </HBox>
+        <HBox alignment="TOP_CENTER" prefHeight="159.0" prefWidth="379.0">
+          <children>
+            <TextArea fx:id="descriptionField" focusTraversable="false" prefWidth="246.0" wrapText="true" />
+          </children>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="57.0" prefWidth="379.0">
+          <children>
+            <Button id="registerButton" font="$x1" mnemonicParsing="false" onAction="#editItem" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: red;" text="Изменить" textAlignment="CENTER" textFill="WHITE" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="38.9998779296875" prefWidth="379.0">
+          <children>
+            <Text fx:id="errorField" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+              <font>
+                <Font size="18.0" />
+              </font>
+            </Text>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="66.0" prefWidth="379.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#deleteItem" prefHeight="35.0" prefWidth="146.0" text="Удалить" />
+          </children>
+        </HBox>
+      </children>
+    </FlowPane>
+    <HBox alignment="CENTER" layoutX="2.0" layoutY="568.0" prefHeight="39.0" prefWidth="379.0" />
+  </children>
+</AnchorPane>
